@@ -6,6 +6,7 @@ import {
     onAuthStateChanged,
     signOut
 } from 'firebase/auth'
+import db from './conn'
 
 class AuthService {
     constructor() {
