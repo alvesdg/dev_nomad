@@ -1,9 +1,9 @@
 import firebase from '../firebase/firebase'
 import {
     getAuth,
-    createUserWhithEmailAndPassword,
+    createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
-    authStateChanged,
+    onAuthStateChanged,
     signOut
 } from 'firebase/auth'
 
