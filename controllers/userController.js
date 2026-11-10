@@ -34,7 +34,18 @@ export const ROLE_PERMISSIONS = Object.freeze({
         canCreateWorkspaces: false,
         canManageWorkspaces: false,
         canRegisterPlaces: false,
-        canManageUsers: false
+        canManageUsers: false,
+        canViewUsers: false,
+        canEditUsers: false,
+        canEditOwnProfile: true,
+        canAssignRoles: false,
+        canDisableUsers: false,
+        canDeleteUsers: false,
+        canManagePlaces: false,
+        canDeleteWorkspaces: false,
+        canViewCheckIns: false,
+        canModerateReviews: false,
+        canViewReports: false
     },
     [USER_ROLES.HOST]: {
         canUseWorkspaces: true,
@@ -43,7 +54,18 @@ export const ROLE_PERMISSIONS = Object.freeze({
         canCreateWorkspaces: true,
         canManageWorkspaces: true,
         canRegisterPlaces: true,
-        canManageUsers: false
+        canManageUsers: false,
+        canViewUsers: false,
+        canEditUsers: false,
+        canEditOwnProfile: true,
+        canAssignRoles: false,
+        canDisableUsers: false,
+        canDeleteUsers: false,
+        canManagePlaces: false,
+        canDeleteWorkspaces: true,
+        canViewCheckIns: true,
+        canModerateReviews: false,
+        canViewReports: false
     },
     [USER_ROLES.PLACE]: {
         canUseWorkspaces: false,
@@ -52,7 +74,18 @@ export const ROLE_PERMISSIONS = Object.freeze({
         canCreateWorkspaces: true,
         canManageWorkspaces: true,
         canRegisterPlaces: true,
-        canManageUsers: false
+        canManageUsers: false,
+        canViewUsers: false,
+        canEditUsers: false,
+        canEditOwnProfile: true,
+        canAssignRoles: false,
+        canDisableUsers: false,
+        canDeleteUsers: false,
+        canManagePlaces: true,
+        canDeleteWorkspaces: true,
+        canViewCheckIns: true,
+        canModerateReviews: false,
+        canViewReports: false
     },
     [USER_ROLES.ADMIN]: {
         canUseWorkspaces: true,
@@ -61,7 +94,18 @@ export const ROLE_PERMISSIONS = Object.freeze({
         canCreateWorkspaces: true,
         canManageWorkspaces: true,
         canRegisterPlaces: true,
-        canManageUsers: true
+        canManageUsers: true,
+        canViewUsers: true,
+        canEditUsers: true,
+        canEditOwnProfile: true,
+        canAssignRoles: true,
+        canDisableUsers: true,
+        canDeleteUsers: true,
+        canManagePlaces: true,
+        canDeleteWorkspaces: true,
+        canViewCheckIns: true,
+        canModerateReviews: true,
+        canViewReports: true
     }
 });
 
