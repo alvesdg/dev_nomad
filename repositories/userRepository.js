@@ -22,10 +22,8 @@ export class UserRepository {
                 throw new Error("E-mail e senha são obrigatórios para criação de conta.");
             }
 
-            // 1. Cria a conta no Firebase Authentication
             const authUser = await this.authService.signUp(userData.email, userData.password);
 
-            // 2. Atualiza displayName e photoURL na conta de autenticação se informados
             if (userData.displayName || userData.photoURL) {
                 try {
                     await this.authService.updateUserProfile(
@@ -37,15 +35,13 @@ export class UserRepository {
                 }
             }
 
-            // 3. Monta o modelo User com o mesmo UID gerado pela conta Auth
             const userEntity = new User({
                 ...userData,
                 uid: authUser.uid,
                 emailVerified: authUser.emailVerified || false,
-                password: null // Senha não deve ser armazenada no Firestore
+                password: null
             });
 
-            // 4. Salva os dados do usuário na coleção do Firestore
             const savedUser = await this.firestoreService.createUser(userEntity);
             return savedUser;
         } catch (error) {
